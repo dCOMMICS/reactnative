@@ -18,9 +18,14 @@ export default function App() {
       await  Splashscreen.hideAsync();
     }
   }, [fontsLoaded]);
+
+  if (! fontsLoaded){
+    return null;
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style = {styles.textStyle}>Welcome to My APP</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -33,4 +38,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  textStyle:{
+    fontFamily: " bold sans-serif",
+    fontSize: 26
+
+  }
+
 });
