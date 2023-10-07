@@ -5,6 +5,10 @@ import * as Splashscreen from "expo-splash-screen";
 import { useCallback } from 'react';
 
 export default function App() {
+
+  const[fontsLoaded] = useFonts ({
+    regular: require('./assets/fonts/regular.otf')
+  })
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
