@@ -12,6 +12,12 @@ export default function App() {
     bold: require('./assets/font/bold.otf'),
     
   })
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded){
+      await  Splashscreen.hideAsync();
+    }
+  }, [fontsLoaded]);
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
