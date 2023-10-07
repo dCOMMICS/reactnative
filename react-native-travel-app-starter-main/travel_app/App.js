@@ -7,7 +7,10 @@ import { useCallback } from 'react';
 export default function App() {
 
   const[fontsLoaded] = useFonts ({
-    regular: require('./assets/fonts/regular.otf')
+    regular: require('./assets/fonts/regular.otf'),
+    medium: require('./assets/font/medium.otf'),
+    bold: require('./assets/font/bold.otf'),
+    
   })
   return (
     <View style={styles.container}>
